@@ -2055,7 +2055,9 @@ function redzlib:MakeWindow(Configs)
 			return Toggle
 		end
 		function Tab:AddDropdown(Configs)
-    local DName = Configs[1] or Configs.Name or Configs.Title or "Dropdown!"
+          local Container = self.Container
+
+   local DName = Configs[1] or Configs.Name or Configs.Title or "Dropdown!"
     local DDesc = Configs.Desc or Configs.Description or ""
     local DOptions = Configs[2] or Configs.Options or {"Option 1", "Option 2"}
     local Callback = Funcs:GetCallback(Configs, 4)
